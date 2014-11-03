@@ -39,13 +39,13 @@ int main(int arc, char **argv)
 	
 	bcm2835_spi_begin();
 
-bcm2835_spi_transfernb(out_ch0, ch0_data, 3);
+  bcm2835_spi_transfernb(out_ch0, ch0_data, 3);
 	printf("\nGelesene Daten an CH0:    %02X %02X %02X\n", ch0_data[0], ch0_data[1], ch0_data[2]);
 	bcm2835_spi_transfernb(out_ch1, ch1_data, 3);
 	printf("Gelesene Daten an CH1:    %02X %02X %02X\n\n", ch1_data[0], ch1_data[1], ch1_data[2]);
 
 	bcm2835_spi_end();
-bcm2835_close();
+  bcm2835_close();
 
   temp.low = ch0_data[2];
 	temp.hi = ch0_data[1];
