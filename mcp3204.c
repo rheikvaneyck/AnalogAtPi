@@ -13,7 +13,7 @@ uint16_t calcmVolt(uint16_t val)
 float calcTemp(uint16_t val)
 {
 	float temp;
-	temp = calcmVolt(val) / 30.0;
+	temp = (calcmVolt(val) - 500) / 10.0;
 	return temp;
 }
 
